@@ -4,181 +4,123 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.mits.kakaroto.courtcounterbasketapp.MainActivity">
 
-    <ImageView
-        android:id="@+id/img_Garis"
+    <TextView
+        android:id="@+id/tv_firstAuthor"
         android:layout_width="wrap_content"
-        android:layout_height="400dp"
-        android:src="@drawable/garis_vertikal"
+        android:layout_height="wrap_content"
+        android:text="RESULT SCORE"
+        android:textSize="35sp"
+        android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:paddingLeft="110dp"
-        android:paddingRight="110dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        />
+
+    <ImageView
+        android:id="@+id/img_garis"
+        android:src="@drawable/garis_vertikal"
+        android:layout_below="@id/tv_firstAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         />
 
     <TextView
-        android:id="@+id/tv_teamA"
+        android:id="@+id/tv_lblResultScoreA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team A"
-        android:textSize="30sp"
-        android:textColor="@color/colorPrimaryText"
-        android:fontFamily="casual"
+        android:text="TEAM A"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/tv_firstAuthor"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         />
 
     <TextView
-        android:id="@+id/tv_teamB"
+        android:id="@+id/tv_resultScoreA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team B"
-        android:textSize="30sp"
-        android:textColor="@color/colorPrimaryText"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="5dp"
-        android:fontFamily="casual"
-        android:paddingRight="2dp"
-        />
-
-    <TextView
-        android:id="@+id/tv_scoreA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_teamA"
         android:text="0"
         android:textSize="80sp"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:layout_marginTop="15dp"
         android:textStyle="bold"
+        android:textAlignment="center"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/tv_lblResultScoreA"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+
         />
 
     <TextView
-        android:id="@+id/tv_scoreB"
+        android:id="@+id/tv_lblResultScoreB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_teamB"
+        android:text="TEAM B"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/tv_firstAuthor"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_resultScoreB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="0"
         android:textSize="80sp"
-        android:paddingLeft="35dp"
-        android:paddingRight="40dp"
-        android:layout_marginTop="15dp"
         android:textStyle="bold"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:textAlignment="center"
+        android:layout_below="@+id/tv_lblResultScoreB"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
         />
 
     <Button
-        android:onClick="submitTwoPointA"
-        android:id="@+id/btn_twoPointA"
-        android:layout_width="125dp"
+        android:onClick="submitStart"
+        android:id="@+id/btn_courtCount"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2 POINT SHOOT"
-        android:textSize="15sp"
-        android:layout_below="@+id/tv_scoreA"
-        android:layout_marginTop="10dp"
+        android:text="START COURT COUNT"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@+id/img_garis"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
         android:textColor="@color/colorIcons"
         android:background="@color/colorPrimary"
         />
 
     <Button
-        android:onClick="submitThreePointA"
-        android:id="@+id/btn_threePointA"
-        android:layout_width="125dp"
+        android:onClick="submitExit"
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="3 POINT SHOOT"
-        android:textSize="15sp"
-        android:layout_below="@+id/btn_twoPointA"
-        android:layout_marginTop="10dp"
+        android:text="EXIT"
+        android:textSize="20sp"
         android:textColor="@color/colorIcons"
+        android:layout_below="@+id/btn_courtCount"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:background="@color/colorPrimary"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
         />
 
-    <Button
-        android:onClick="submitFreeThrowA"
-        android:id="@+id/btn_freeThrowA"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:text="FREE THROW"
-        android:textSize="15sp"
-        android:layout_below="@+id/btn_threePointA"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
-
-        />
-
-    <Button
-        android:onClick="submitTwoPointB"
-        android:id="@+id/btn_twoPointB"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:text="2 POINT SHOOT"
-        android:textSize="15sp"
-        android:layout_below="@+id/tv_scoreB"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentRight="true"
-
-        />
-
-    <Button
-        android:onClick="submitThreePointB"
-        android:id="@+id/btn_threePointB"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:text="3 POINT SHOOT"
-        android:textSize="15sp"
-        android:layout_below="@+id/btn_twoPointB"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentRight="true"
-        />
-
-    <Button
-        android:onClick="submitFreeThrowB"
-        android:id="@+id/btn_freeThrowB"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:text="FREE THROW"
-        android:textSize="15sp"
-        android:layout_below="@+id/btn_threePointB"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentRight="true"
-        />
-
-    <Button
-        android:onClick="submitEnd"
-        android:id="@+id/btn_end"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_freeThrowA"
-        android:text="End"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="65dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
-        />
-
-    <Button
-        android:onClick="submitReset"
-        android:id="@+id/btn_reset"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_freeThrowB"
-        android:text="Reset"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
-        android:layout_alignLeft="@+id/btn_freeThrowB"
-        />
 
 </RelativeLayout>
