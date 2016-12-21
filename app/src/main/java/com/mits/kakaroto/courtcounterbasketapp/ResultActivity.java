@@ -15,6 +15,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+
         tvScoreA = (TextView) findViewById(R.id.tv_scoreA);
         tvScoreB = (TextView) findViewById(R.id.tv_scoreB);
 

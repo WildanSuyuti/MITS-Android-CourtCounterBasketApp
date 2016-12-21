@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorPrimaryLight"
+    android:background="@drawable/street_basketball"
     tools:context="com.mits.kakaroto.courtcounterbasketapp.ResultActivity">
 
     <ImageView
@@ -29,7 +29,9 @@
         android:text="TEAM A"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryText"
+        android:textColor="@color/colorAccent"
+
+        android:padding="10dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         />
@@ -41,7 +43,9 @@
         android:text="TEAM B"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryText"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:padding="10dp"
         android:layout_alignParentRight="true"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -56,9 +60,7 @@
         android:text="0"
         android:textSize="80sp"
         android:textStyle="bold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:textColor="@color/colorWhite"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         />
 
@@ -70,10 +72,11 @@
         android:text="0"
         android:textSize="80sp"
         android:textStyle="bold"
+        android:textColor="@color/colorWhite"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
         />
 
     <Button
@@ -83,10 +86,11 @@
         android:layout_height="wrap_content"
         android:text="2 POINT SHOOT"
         android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_below="@+id/tv_scoreA"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorAccent"
         />
 
     <Button
@@ -96,10 +100,11 @@
         android:layout_height="wrap_content"
         android:text="3 POINT SHOOT"
         android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_below="@+id/btn_twoPointA"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorAccent"
         />
 
     <Button
@@ -109,10 +114,11 @@
         android:layout_height="wrap_content"
         android:text="FREE THROW"
         android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_below="@+id/btn_threePointA"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorAccent"
 
         />
 
@@ -123,10 +129,11 @@
         android:layout_height="wrap_content"
         android:text="2 POINT SHOOT"
         android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_below="@+id/tv_scoreB"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorAccent"
         android:layout_alignParentRight="true"
 
         />
@@ -138,10 +145,11 @@
         android:layout_height="wrap_content"
         android:text="3 POINT SHOOT"
         android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_below="@+id/btn_twoPointB"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorAccent"
         android:layout_alignParentRight="true"
         />
 
@@ -152,10 +160,11 @@
         android:layout_height="wrap_content"
         android:text="FREE THROW"
         android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_below="@+id/btn_threePointB"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorAccent"
         android:layout_alignParentRight="true"
         />
 
@@ -167,10 +176,11 @@
         android:layout_below="@+id/btn_freeThrowA"
         android:text="CANCEL"
         android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="37dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorAccent"
         />
 
     <Button
@@ -181,9 +191,10 @@
         android:layout_below="@+id/btn_freeThrowB"
         android:text="Reset"
         android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorIcons"
-        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorAccent"
         android:layout_alignLeft="@+id/btn_freeThrowB"
         />
 
@@ -193,10 +204,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="END"
+        android:textStyle="bold"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/colorIcons"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorWhite"
         />
 
 </RelativeLayout>
